@@ -1,0 +1,19 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <span>My App</span> &nbsp; &nbsp; &nbsp; &nbsp;
+
+    <span class="example-spacer"></span>
+    <a
+        mat-button
+        [routerLink]="['/login']"
+        [routerLinkActive]="'active-link'"
+        style="color: white;"
+      >
+        <mat-icon mat-list-icon>power_settings_new</mat-icon> <span>Login</span>
+      </a>
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click) = "login()">
+      <mat-icon>account_box</mat-icon>
+    </button>
+    <span>Login</span> -->
+  </mat-toolbar>
+</div>

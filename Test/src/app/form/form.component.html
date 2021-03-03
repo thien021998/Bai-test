@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Nhập thêm 1 sinh viên mới</h1>
+  <form [formGroup]="studentForm">
+    <mat-form-field class="form-header">
+      <mat-label>ID</mat-label>
+      <input matInput placeholder="" formControlName="id" require />
+    </mat-form-field>
+    <!--
+    <span *ngIf="profileForm.controls.code.invalid" class="errorMessage">
+      * Cần phải nhập mã sinh viên
+    </span> -->
+    <mat-form-field class="form-header">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="" formControlName="first_name" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="" formControlName="last_name" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="" formControlName="email" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Link Avatar</mat-label>
+      <input matInput placeholder="" formControlName="avatar" require />
+    </mat-form-field>
+    <br />
+    <button
+      type="submit"
+      class="btn btn-success"
+      (click)="onClose()"
+    >
+      CanCel
+    </button>
+    &nbsp;
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!studentForm.valid"
+      (click)="save()"
+    >
+      Lưu <span *ngIf="id === 0">và nhập mới</span>
+    </button>
+  </form>
+</div>
